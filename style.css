@@ -1,0 +1,313 @@
+body {
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(221, 221, 221);
+  color: rgb(34, 34, 34);
+  transition: 2.5s;
+  width: 100%;
+}
+.dark {
+  background-color: black;
+  transition: 2.5s;
+}
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+  margin: 10px 0;
+  transition: 2.5s;
+  }
+.dark h1{
+  color: greenyellow;
+  transition: 2.5s;
+  }
+h2 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 50px 0 10px 0;
+  transition: 2.5s;
+}
+.dark h2{
+  color: greenyellow;
+  transition: 2.5s;
+}
+p{
+  font-size: 100%;
+  font-style: oblique;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: 2.5s;
+}
+
+p img{
+  border-bottom: 1px solid rgb(0, 238, 255);
+  border-radius: 20px;
+  height: 150px;
+  width: 150px;
+  margin: 0;
+  transition: 2.5s;
+}
+.dark p img{
+  border-bottom: 1px solid greenyellow;
+  transition: 2.5s;
+}
+
+header {
+  display: flex;
+  justify-content: right;
+  padding: 30px;
+}
+.switch {
+  width: 80px;
+  height: 40px;
+  background-color: rgb(41, 40, 40);
+  border-radius: 40px;
+  position: relative;
+}
+.flicker {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(222, 238, 3);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: inset 4px 4px 4px rgb(238, 255, 0),
+    inset -4px -4px 4px rgba(187, 201, 0, 0.9);
+  transition: 2.5s;
+}
+.dark .flicker {
+  background-color: rgb(226, 226, 226);
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+    inset -4px -4px 4px rgba(156, 156, 156, 0.9);
+  transform: translateX(40px);
+  transition: 2.5s;
+}
+.dark > * {
+  color: rgb(235, 232, 232);
+}
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.sun {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(230, 255, 8);
+  box-shadow: 0 0 5px 2px rgba(230, 255, 8, 0.5);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.main-text {
+  width: 80%;
+  padding: 30px;
+  text-align: center;
+}
+.square {
+  width: 98%;
+  margin: 1%;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+  border-bottom: 1px solid white;
+  transition: 2.5s;
+}
+.dark .square {
+  background-color: rgb(75, 74, 74);
+  color: white;
+  border-bottom: 1px solid greenyellow;
+  transition: 2.5s;
+}
+.bg-image {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.sub-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 30px;
+  background-color: rgba(143, 143, 143, 0.61);
+  border-top: 5px solid white;
+}
+.dark footer {
+  background-color: rgba(0, 48, 0, 0.644);
+  border-top: 5px solid greenyellow;
+}
+footer p {
+  margin-bottom: 2rem;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.socials div {
+  width: 2rem;
+  height: 2rem;
+}
+.custom-svg {
+  transition: 0.5s;
+}
+.dark .custom-svg {
+  fill: rgb(255, 255, 255);
+}
+.custom-svg:hover {
+  fill: rgb(43, 255, 0);
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1000px) {
+   .square {
+    width: 48%;
+    margin: 1%;
+    height: 600px;
+  }
+  .square .content p img{
+    border-radius: 20px;
+     height: 300px;
+     width: 300px;
+     margin: 0;
+  }
+
+  .main {
+    height: 80vh;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .main-text {
+    width: 50%;
+    text-align: start;
+  }
+
+  .decor {
+    position: relative;
+    width: 50%;
+    height: 350px;
+  }
+
+  .cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-25deg) skew(25deg);
+  }
+
+  .cube:before {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+  }
+
+  .cube::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+  }
+
+  #javascript {
+    left: 60px;
+    bottom: 100px;
+    background-color: rgb(253, 253, 69);
+    box-shadow: -60px 60px 20px rgba(82, 82, 82, 0.15);
+  }
+
+  #javascript:before {
+    background-color: rgb(181, 181, 44);
+  }
+
+  #javascript:after {
+    background-color: rgb(229, 229, 32);
+  }
+
+  #html {
+    left: 200px;
+    top: 10px;
+    background-color: rgb(255, 171, 97);
+    box-shadow: -100px 100px 20px rgb(50 50 50 / 15%);
+  }
+
+  #html:before {
+    background-color: rgb(192, 100, 19);
+  }
+
+  #html:after {
+    background-color: rgb(228, 115, 17);
+  }
+
+  #go {
+    left: 270px;
+    bottom: 10px;
+    background-color: rgb(117, 255, 255);
+    box-shadow: -50px 50px 20px rgb(50 50 50 / 15%);
+  }
+
+  #go:before {
+    background-color: rgb(138, 233, 233);
+  }
+
+  #go:after {
+    background-color: rgb(71, 226, 226);
+  }
+
+  #css {
+    right: 75px;
+    bottom: 160px;
+    background-color: rgb(32, 177, 250);
+    box-shadow: -80px 80px 20px rgb(50 50 50 / 15%);
+  }
+
+  #css:before {
+    background-color: rgb(6, 126, 186);
+  }
+
+  #css:after {
+    background-color: rgb(11, 154, 226);
+  }
+}
